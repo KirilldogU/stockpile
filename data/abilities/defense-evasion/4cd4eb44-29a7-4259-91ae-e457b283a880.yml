@@ -11,12 +11,12 @@
     darwin:
       sh:
         cleanup: |
-          rm #{payload}
+          rm #{host.payload.path}
     linux:
       sh:
         cleanup: |
-          rm #{payload}
+          rm #{host.payload.path}
     windows:
       psh,pwsh:
         cleanup: |
-          Remove-Item -Force -Path "#{payload}"
+          Remove-Item -Force -Path "#{host.payload.path}"
